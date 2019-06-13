@@ -27,10 +27,12 @@ Vue.use(AdManager, {
 ```
 
 **Params**
-| Title  | Description | Type | Required |
-| ------------- | ------------- |
-| mappings  | Mapping sizes object | object  | true |
+
+| Title  | Description  | Type  | Required  |
+| ------------ | ------------ | ------------ | ------------ |
+| mappings  | Mapping sizes object  | object  | true  |
 | sizes  | Google ad unit sizes  | object  | false  |
+
 
 ## Use
 Now you can use the google ad component throughout your application. There are a few params you can pass through for customization
@@ -40,14 +42,14 @@ Now you can use the google ad component throughout your application. There are a
 ```
 
 **Params**
-| Title  | Description | Type | Required |
-| ------------- | ------------- |
-| unit  | Ad unit name from ad manager | string  | true |
-| id  | Div id tag to help reference ad  | string  | false  |
 
 
+| Title  | Description  | Type  | Required  |
+| ------------ | ------------ | ------------ | ------------ |
+| unit  |  Ad unit name from ad manager  | string  | true  |
+| id  | Div id tag - used to identify ads  | string  | false  |
 
-Contributing
-------------
+
+## Contributing
 
 Pull requests welcomed!
