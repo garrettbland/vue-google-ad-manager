@@ -18,7 +18,9 @@
                 default: 'normal'
             },
             targetings: {
-                default: () => {[]}
+                default: () => {
+                    return []
+                }
             }
         },
 
