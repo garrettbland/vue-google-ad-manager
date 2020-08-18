@@ -18,9 +18,8 @@
                 default: 'normal'
             },
             targetings: {
-                default: () => {
-                    return new Array();
-                }
+                type: Array,
+                default: () => []
             }
         },
 
