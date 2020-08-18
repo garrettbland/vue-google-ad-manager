@@ -19,7 +19,7 @@
             },
             targetings: {
                 default: () => {
-                    return []
+                    return new Array();
                 }
             }
         },
