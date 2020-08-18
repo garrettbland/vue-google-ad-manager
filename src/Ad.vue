@@ -16,6 +16,9 @@
             size: {},
             slotType: {
                 default: 'normal'
+            },
+            targetings: {
+                default: () => {[]}
             }
         },
 
@@ -62,6 +65,9 @@
             },
             defineSlot(){
                 googletag.defineSlot(this.adUnit, this.sizes, this.id).defineSizeMapping(this.mapping).addService(googletag.pubads());
+                this.targetings.forEach(elm => {
+                    googletag.pubads().setTargeting(elm.key, elm.value);
+                });
             },
             defineOutOfPageSlot(){
                 googletag.defineOutOfPageSlot(this.adUnit, this.id).addService(googletag.pubads())
@@ -73,7 +79,8 @@
         },
         beforeDestroy () {
             googletag.cmd.push(() => {
-                googletag.destroySlots()
+                googletag.destroySlots();
+                googletag.pubads().clearTargeting();
             })
         }
     }
